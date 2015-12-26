@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="demo" ng-strict-di>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <link rel="stylesheet" href="">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <div>
+        <p>Enter your Name <input ng-model="personName" type="text"></p>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Number</th>
+                <th>Grade</th>
+            </tr>
+            <tr ng-repeat="person in employees | filter:personName">
+                <td>{{person.name}}</td>
+                <td>{{person.number}}</td>
+                <td>{{person.grade}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="../untitled/js/script.js"></script>
+</body>
+</html>
